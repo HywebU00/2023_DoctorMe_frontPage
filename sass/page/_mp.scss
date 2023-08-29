@@ -1,0 +1,1227 @@
+.mp {
+  main {
+    margin: 0;
+  }
+  header {
+    width: 100%;
+    padding: 0 2rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    @include screen('tablet') {
+      padding: 0;
+    }
+    > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    h1 {
+      margin: 0.625rem 0;
+    }
+    .mpLogo {
+      width: 170px;
+    }
+    .applyBtn.btn {
+      background-color: $errorSecondary;
+      color: #fff;
+      font-size: 1rem;
+      padding: 0 1.5rem;
+      border-radius: 2rem;
+      font-weight: 500;
+      height: 2.75rem;
+    }
+
+    position: fixed;
+    background: #fff;
+    z-index: 99;
+    top: 0;
+    .v-card {
+      margin: 0;
+      border-radius: 0px;
+      header {
+        width: 100%;
+        padding: 0;
+      }
+    }
+    ul {
+      display: flex;
+      margin: 0;
+      align-items: center;
+      list-style: none;
+      white-space: nowrap;
+      li {
+        margin-right: 2rem;
+        font-weight: 500;
+        &:last-child {
+          margin-right: 0;
+        }
+        a {
+          color: $primaryDark !important;
+          &:hover {
+            text-decoration: none;
+            color: $primary !important;
+          }
+        }
+      }
+      button {
+        font-weight: 700;
+      }
+    }
+    .mobileBtn {
+      display: none;
+      background: #fff;
+      border: 2px solid #ececec;
+      border-radius: 0.5rem;
+      padding: 0 1rem;
+      height: rem(42);
+      i {
+        line-height: rem(42);
+      }
+      &:hover {
+        background: #ececec;
+      }
+    }
+    .mobileContenet {
+      // display: none;
+      position: absolute;
+      border-radius: 0;
+      transition: all 0.5s;
+      width: 100%;
+      top: 64px;
+      left: 0;
+      background: #fff;
+      height: 0px;
+      overflow: hidden;
+      ul {
+        display: block;
+
+        padding: 0;
+        margin: 1rem 2rem;
+        li {
+          margin: 0;
+          display: flex;
+          width: 100%;
+          justify-content: center;
+          a {
+            display: block;
+            width: 100%;
+            padding: 0.5rem;
+            text-align: center;
+            &:hover {
+              background-color: #ececec;
+              border-radius: 0.25rem;
+            }
+          }
+          button {
+            margin-top: 0.5rem;
+          }
+        }
+      }
+      &.active {
+        transition: all 0.5s;
+
+        height: rem(244);
+
+        border-top: #ececec solid 2px;
+        box-shadow: rgba(33, 35, 38, 0.2) 0px 10px 10px -10px;
+      }
+    }
+    @include screen('tablet') {
+      padding: 0;
+      .header_content {
+        margin: 0 2rem;
+      }
+    }
+    @include screen('mobile') {
+      ul {
+        display: none;
+      }
+      .mobileBtn {
+        display: block;
+      }
+    }
+  }
+  .dialogMobileCard {
+    ul {
+      li {
+        a {
+          color: #fff;
+          &:hover {
+            text-decoration: unset;
+          }
+        }
+      }
+    }
+    .v-image {
+      width: 180px;
+      margin-bottom: 2rem;
+    }
+  }
+  .content {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    max-width: 1200px;
+    position: relative;
+    @media screen and (max-width: 1200px) {
+      padding: 0 2rem;
+    }
+    @include screen('tablet') {
+      display: block;
+    }
+    @include screen('mobile') {
+      flex-wrap: wrap;
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+  section {
+    z-index: 1;
+    .infoForm {
+      .formGroup {
+        .v-text-field__details,
+        .v-messages {
+          padding: 0;
+          min-height: 0;
+          margin-bottom: 0;
+        }
+        .v-select {
+          padding-top: 0;
+        }
+        .v-select__selection {
+          color: $primary;
+          font-weight: 400;
+        }
+      }
+      .checkboxInline {
+        display: flex;
+        margin: 1rem 0;
+        align-items: center;
+        a {
+          color: $dark;
+          font-weight: 700;
+          margin-left: 0.5rem;
+        }
+        label {
+          margin: 0;
+        }
+        .v-input--selection-controls {
+          margin-top: 0;
+          padding-top: 0;
+        }
+        .v-input__slot {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .imgContent {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: self-start;
+    h1 {
+      color: $secondary;
+    }
+    p {
+      font-weight: 500;
+    }
+    .img {
+      position: fixed;
+      top: 30vh;
+      left: calc(50vw - 520px);
+      .text {
+        text-align: center;
+        p {
+          color: $primaryDark;
+        }
+      }
+      .applyImg {
+        display: flex;
+        justify-content: center;
+      }
+    }
+    @media (max-width: 1200px) {
+      .img {
+        left: calc(50vw - 420px);
+      }
+    }
+    @media (max-width: 996px) {
+      .img {
+        left: 2rem;
+      }
+    }
+    @include screen('tablet') {
+      width: 100%;
+      height: auto;
+      .img {
+        position: relative;
+        top: 0rem;
+        margin: 2rem auto;
+        left: 0;
+      }
+    }
+  }
+  .formContent {
+    width: 50%;
+    margin-bottom: 3rem;
+    form {
+      margin-top: 1rem;
+      color: $primaryDark;
+      > label {
+        i {
+          margin-right: 0.5rem;
+        }
+        span {
+          line-height: 1rem;
+        }
+        font-size: 1.5rem;
+        font-weight: bolder;
+        text-align: center;
+        color: $primaryDark;
+        margin: 2em 0 2.5rem 0;
+      }
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      color: $primaryDark;
+      margin-bottom: 0;
+      li {
+        margin-bottom: 0.5rem;
+        font-weight: bolder;
+        font-size: 0.9rem;
+        span {
+          color: $errorSecondary;
+        }
+      }
+    }
+
+    .submitBtn {
+      height: 3rem;
+      margin-top: 1.5rem;
+      font-weight: bolder;
+      font-size: 1.25rem;
+    }
+
+    @include screen('tablet') {
+      width: 100%;
+    }
+    @include screen('mobile') {
+      width: 100%;
+    }
+  }
+  .formGroup {
+    label {
+      font-size: 1rem;
+      span {
+        margin-left: 0.5rem;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: $errorSecondary;
+        @media screen and (max-width: 1024px) {
+          display: block;
+          margin-left: 0;
+        }
+      }
+    }
+    input,
+    textarea {
+      &::placeholder {
+        color: #8799aa;
+        font-weight: bolder;
+      }
+    }
+  }
+  .dialogCard {
+    border-radius: 1rem;
+    .v-card__title {
+      button {
+        font-size: 2.5rem;
+        color: #b8b8b8;
+        font-weight: bolder;
+      }
+      justify-content: flex-end !important;
+    }
+    .v-card__text {
+      font-weight: bolder;
+      max-width: 65%;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      h3 {
+        width: 100%;
+        color: $errorSecondary;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        font-weight: bolder;
+      }
+      p {
+        width: 100%;
+        line-height: 2rem;
+        color: $primaryDark;
+      }
+      text-align: center;
+      button {
+        margin: 0 auto;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+  .content.finish,
+  .content.build {
+    height: calc(100vh - 64px);
+    .imgContent {
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: center;
+      .text {
+        width: 100%;
+      }
+      h1 {
+        text-align: center;
+      }
+      p {
+        color: $primaryDark;
+        text-align: center;
+        width: 100%;
+        line-height: 2rem;
+        @include screen('xsMobile') {
+          br {
+            display: none;
+          }
+        }
+      }
+      .successImg {
+        width: 45%;
+      }
+    }
+    @include screen('tablet') {
+      display: flex;
+    }
+    .text {
+      @include screen('tablet') {
+        margin-top: 2rem;
+      }
+    }
+  }
+  .content.build {
+    height: 100vh;
+    position: relative;
+    margin-top: -64px;
+    .text {
+      margin-bottom: 2rem;
+      @include screen('tablet') {
+        margin-top: 2rem;
+      }
+    }
+    p {
+      color: $primaryDark;
+      text-align: center;
+      width: 100%;
+      line-height: 2rem;
+      span {
+        color: $errorSecondary;
+      }
+      @include screen('xsMobile') {
+        br {
+          display: none;
+        }
+      }
+    }
+    .workingIdeaImg,
+    .buildFinishImg {
+      max-width: 400px;
+    }
+    .buildFinishImg {
+      margin-bottom: 2rem;
+      @include screen('mobile') {
+        max-width: 80%;
+      }
+    }
+  }
+  .mpIndex {
+    section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-color: #fff;
+      > div {
+        margin: 0 3rem;
+        width: 100%;
+        max-width: 1440px;
+        ul {
+          display: flex;
+          justify-content: center;
+          list-style: none;
+          flex-wrap: wrap;
+        }
+        h1 {
+          font-family: inherit;
+          font-weight: 500;
+          font-size: 2.5rem;
+          line-height: 4rem;
+          margin-top: 0;
+        }
+        h2 {
+          color: $primaryDark;
+          margin: 5rem 0 3.75rem 0;
+          font-weight: bolder;
+          text-align: center;
+          font-size: 2.2rem;
+          span {
+            color: $errorSecondary;
+          }
+        }
+        h3 {
+          font-weight: 500;
+          font-size: 1.75rem;
+          margin: 0 0 0.5rem 0;
+        }
+        p {
+          font-weight: 500;
+          font-size: 1.25rem;
+          margin-top: 0;
+        }
+        @media (max-width: 960px) {
+          margin: 0 5rem;
+        }
+        @include screen('mobile') {
+          margin: 0 3rem;
+        }
+      }
+    }
+    .container button,
+    .banner button {
+      background: $primaryDark;
+      color: #fff;
+      border: 0px;
+      display: flex;
+      align-items: center;
+      border-radius: 0.25rem;
+      position: relative;
+      i {
+        margin-left: 1rem;
+        font-size: 1.25rem !important;
+        position: absolute;
+        transition: all 0.5s;
+        right: 1rem;
+      }
+      span {
+        padding-right: 2rem;
+      }
+      &:hover {
+        i {
+          right: 0rem;
+        }
+      }
+    }
+    .banner {
+      margin-top: rem(64);
+      height: 37.5rem;
+      position: relative;
+      justify-content: flex-start;
+      h1 {
+        margin-bottom: 0.5rem;
+      }
+      h1,
+      p {
+        color: #fff;
+      }
+      .subtitle {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+
+        img {
+          width: rem(28);
+          max-width: 1.75rem;
+        }
+        p {
+          margin: 0.5rem 0 0 0.6rem;
+        }
+      }
+      background-image: url('../images/mp/img_banner.jpg');
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 3rem;
+        width: 432px;
+        height: 70px;
+        background: url('../images/mp/doctorMe_text.png') no-repeat;
+      }
+      @include screen('tablet') {
+        &::after {
+          right: 0;
+        }
+      }
+      @include screen('mobile') {
+        margin: 0;
+      }
+    }
+    .infoSection {
+      .infoContainer {
+        margin-bottom: 5rem;
+      }
+
+      .item {
+        display: flex;
+        align-items: center;
+        &:first-child {
+          border-right: 1px solid $secondary;
+          .v-image {
+            margin-left: 0;
+          }
+        }
+        h3 {
+          color: $errorSecondary;
+        }
+        p {
+          font-size: 1rem;
+          line-height: 2rem;
+        }
+        .v-image {
+          margin-left: 2.5rem;
+          min-width: rem(200);
+        }
+        .v-image + div {
+          margin: 0 0 0 3rem;
+          padding-right: 3rem;
+          @include screen('mobile') {
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
+      @media (max-width: 1264px) {
+        .container {
+          max-width: 900px;
+        }
+        .item,
+        .item:first-child {
+          display: block;
+        }
+        .infoContainer {
+          margin-bottom: 2rem;
+        }
+        .item,
+        .item:first-child {
+          margin-bottom: 2rem;
+
+          .v-image {
+            display: flex;
+            margin-bottom: 1rem;
+            justify-content: center;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+      @media (max-width: 991px) {
+        .container {
+          max-width: 900px;
+        }
+        .infoContainer {
+          flex-direction: column;
+        }
+        .item,
+        .item:first-child {
+          display: flex;
+          width: 100%;
+          max-width: unset;
+        }
+        .item:first-child {
+          border: 0px;
+          border-bottom: 1px solid $secondary;
+        }
+      }
+      @include screen('tablet') {
+        .item,
+        .item:first-child {
+          .v-image {
+            margin: 0 auto;
+          }
+        }
+        .item:first-child {
+          border: 0px;
+          border-bottom: 1px solid $secondary;
+          .v-image {
+            margin-bottom: 3rem;
+          }
+        }
+      }
+      @include screen('mobile') {
+        .item,
+        .item:first-child {
+          display: block;
+          padding: 0 3rem;
+          .v-image {
+            margin-bottom: 3rem;
+          }
+        }
+      }
+      @include screen('xsMobile') {
+        .item,
+        .item:first-child {
+          padding: 0;
+        }
+      }
+    }
+    .userInfoSection {
+      background-image: url('../images/mp/img_bg01.jpg');
+      .v-image {
+        width: 10rem;
+        height: 10rem;
+        margin: 0 auto;
+        background: #fff;
+        border-radius: 50%;
+      }
+      .container {
+        margin-bottom: 2rem;
+      }
+      .col {
+        &:nth-child(even) {
+          margin-top: 4rem;
+        }
+      }
+      h3 {
+        line-height: 1.4;
+        span {
+          display: block;
+          font-size: 2.75rem;
+          margin-left: 0.25rem;
+        }
+      }
+      .item {
+        max-width: 320px;
+        margin: 0 2em;
+        margin-top: -3rem;
+        color: $primaryDark;
+        p {
+          font-size: 1rem;
+          color: #3d3d3d;
+          font-weight: 500;
+          line-height: 2rem;
+        }
+      }
+
+      @media (max-width: 1264px) {
+        .container {
+          max-width: rem(900);
+        }
+        .flexSet {
+          .item,
+          .col:first-child .item,
+          .col:last-child .item {
+            margin: 0 auto;
+
+            max-width: 80%;
+            margin-left: 2rem;
+          }
+          .col:nth-child(even) {
+            margin-top: 0;
+          }
+        }
+      }
+      @include screen('tablet') {
+        .flexEqual_3 .flexSet {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .col {
+            display: flex;
+            flex-basis: calc(100% - 4px);
+            max-width: calc(100% - 4px);
+            margin-bottom: 1rem;
+            align-items: center;
+            .v-image {
+              margin: 0 2rem 0 0;
+            }
+          }
+          .item {
+            max-width: calc(100% - 12rem);
+            width: calc(100% - 12rem);
+          }
+          .col:nth-child(even) {
+            margin-top: 0;
+          }
+        }
+
+        .item {
+          margin: 0 1em;
+        }
+      }
+      @include screen('mobile') {
+        .flexEqual_3 .flexSet {
+          .item,
+          .col:first-child .item,
+          .col:last-child .item {
+            margin: unset;
+            width: 100%;
+            max-width: 100%;
+          }
+          .col {
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 3rem;
+            .v-image {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+    .clinicInfoSection {
+      position: relative;
+      &::after {
+        position: absolute;
+        content: '';
+        background: url('../images/mp/img_shadow.png') no-repeat top left;
+        left: 0;
+        top: 0;
+        width: 420px;
+        height: 690px;
+      }
+      @include screen('tablet') {
+        .container {
+          max-width: 900px;
+        }
+        &::after {
+          width: 80%;
+          height: 20rem;
+          background-size: contain;
+        }
+      }
+      .container {
+        padding: 0;
+      }
+      .col {
+        padding: 0 rem(12);
+      }
+      .flexSet {
+        margin-bottom: 1rem;
+        .col {
+          &:first-child {
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+      .v-image {
+        margin-right: 1rem;
+      }
+      ul {
+        padding: 0;
+        li {
+          margin-bottom: 1rem;
+        }
+      }
+      h3 {
+        color: $primaryDark;
+        display: flex;
+        align-items: flex-start;
+        span {
+          line-height: 1.2;
+        }
+        span.num {
+          font-size: 2.75rem;
+          margin-right: 0.5rem;
+          margin-top: -0.75rem;
+        }
+      }
+      p {
+        font-size: 1rem;
+        color: #3d3d3d;
+        font-weight: 500;
+        line-height: 2rem;
+        margin-left: 2.25rem;
+      }
+      @media (max-width: 960px) {
+        .v-image {
+          margin: 0;
+          width: rem(300);
+          margin: 0 auto;
+          margin-bottom: 1rem;
+        }
+      }
+      @include screen('tablet') {
+        .flexEqual_2 {
+          .flexSet {
+            .col {
+              flex-basis: calc(100% - 4px);
+              max-width: calc(100% - 4px);
+            }
+          }
+        }
+      }
+    }
+    .productSection {
+      @include screen('tablet') {
+        .container {
+          max-width: 900px;
+        }
+      }
+      position: relative;
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        background: url('../images/mp/bg_dark_mask.png') no-repeat;
+        width: 100%;
+        height: 321px;
+      }
+      > div {
+        margin: 2rem 0 6rem 0;
+      }
+      background-image: url('../images/mp/img_bg_dark_03.jpg');
+      div {
+        h2 {
+          color: #fff;
+          margin-bottom: 0;
+        }
+        .subtitle {
+          color: #ffaddf;
+          font-size: 1.5rem;
+          font-weight: bolder;
+          display: block;
+          text-align: center;
+          margin: 1.5rem 10rem;
+          padding-bottom: 1.75rem;
+          border-bottom: 3px solid rgba(153, 189, 255, 0.38);
+          @include screen('mobile') {
+            margin: 1.5rem 2rem;
+          }
+        }
+        .col {
+          padding: rem(12);
+          .v-image {
+            width: 80px;
+            margin: 0 auto;
+          }
+          span {
+            display: block;
+            text-align: center;
+            font-size: 1.25rem;
+            margin: 1rem 0;
+            color: #95eaff;
+            font-weight: bolder;
+            position: relative;
+          }
+        }
+        @include screen('tablet') {
+          .col {
+            width: calc(100% / 3 - 4px);
+            img {
+              margin: 0 auto;
+              width: rem(80);
+              display: block;
+            }
+          }
+        }
+        @include screen('xsMobile') {
+          .col {
+            width: calc(100% / 2 - 4px);
+          }
+        }
+      }
+    }
+    .systemSection {
+      .container {
+        max-width: 990px;
+        margin-bottom: 5rem;
+      }
+      img {
+        width: 100px;
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 2rem;
+      }
+      h3 {
+        text-align: center;
+        color: $primaryDark;
+      }
+      p {
+        text-align: center;
+        font-size: 1rem;
+        color: #3d3d3d;
+        font-weight: 400;
+        line-height: 1.5rem;
+        width: 8rem;
+        margin: 0 auto;
+      }
+      @include screen('mobile') {
+        .col {
+          width: calc(100% - 4px);
+        }
+      }
+    }
+    .priceSection {
+      background-image: url('../images/mp/img_bg02.jpg');
+      .flexSet {
+        flex-wrap: nowrap;
+      }
+      .payCard {
+        margin: 0 1rem;
+        max-width: 354px;
+        padding-bottom: 0;
+        width: 100%;
+        border-radius: 0.75rem;
+        background: #fff;
+        .title {
+          margin-bottom: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          color: #fff;
+          padding: rem(16);
+          border-radius: 1rem 1rem 0 0;
+          h6 {
+            margin-top: 2.25rem;
+            font-size: 2.25rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+          }
+          p {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            span {
+              font-size: 3rem;
+              line-height: 1.2;
+            }
+          }
+          background: $primaryDark;
+          position: relative;
+          &::before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 12px;
+            top: 0;
+            left: 0;
+            border-radius: 0.75rem 0.75rem 0 0;
+            background: linear-gradient(to right, rgba(113, 255, 197, 1) 17%, rgba(23, 33, 76, 1) 99%);
+          }
+        }
+        ul {
+          margin: 2rem 2rem 1.5rem 2rem;
+          padding: 0;
+        }
+        li {
+          width: 100%;
+          font-weight: 500;
+          margin: 0.75rem 0;
+          display: flex;
+          align-items: center;
+          i {
+            font-weight: bolder;
+            margin-right: 0.5rem;
+          }
+          .material-icons-round {
+            color: #00cb9e;
+            &.close {
+              color: #ff006c;
+            }
+          }
+        }
+      }
+      .col {
+        display: flex;
+        justify-content: flex-start;
+        &:nth-child(2) {
+          justify-content: center;
+          .title {
+            &::before {
+              background: linear-gradient(to right, rgba(255, 132, 0, 1) 17%, rgba(23, 33, 76, 1) 99%);
+            }
+          }
+        }
+        &:nth-child(3) {
+          justify-content: flex-end;
+          .title {
+            &::before {
+              background: linear-gradient(to right, rgba(255, 0, 108, 1) 17%, rgba(23, 33, 76, 1) 99%);
+            }
+          }
+        }
+      }
+      p.infoText {
+        display: block;
+        margin-top: 3.5rem;
+        text-align: center;
+        color: $primaryDark;
+        font-size: 1rem;
+        letter-spacing: 0.05rem;
+      }
+      .container {
+        margin-bottom: 5rem;
+      }
+      @media (max-width: 1264px) {
+        .flexSet .col {
+          justify-content: center;
+        }
+      }
+      @media (max-width: 960px) {
+        .payCard {
+          .title p span {
+            font-size: 2rem;
+          }
+        }
+      }
+      @include screen('tablet') {
+        .flexSet {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .col {
+          padding: 1rem;
+          margin-bottom: 1rem;
+        }
+      }
+      @include screen('mobile') {
+        .col {
+          padding: 0rem;
+        }
+        .payCard {
+          margin: 0;
+        }
+      }
+    }
+    .clinicServeSection {
+      height: 24rem;
+      position: relative;
+      background-image: url('../images/mp/img_heart.png');
+      background-size: contain;
+      background-position: -10rem;
+      .container {
+        display: flex;
+        justify-content: flex-end;
+        span.block {
+          display: block;
+        }
+        h2 {
+          text-align: start;
+          line-height: 3.25rem;
+          margin: 0 0 1rem 0;
+        }
+      }
+      @include screen('tablet') {
+        background-size: cover;
+        &::after {
+          position: absolute;
+          content: '';
+          background-color: #fff;
+          opacity: 0.7;
+          height: 100%;
+          width: 100%;
+          z-index: -1;
+        }
+      }
+    }
+    .introduceSection {
+      height: 24rem;
+      background-image: url('../images/mp/img_serve.jpg');
+      background-size: contain;
+      background-position: right;
+      background-color: #f3f3f3;
+      position: relative;
+      .container {
+        display: flex;
+        justify-content: flex-start;
+        h2 {
+          text-align: start;
+          margin: 0 0 1rem 0;
+        }
+        h2 + span {
+          display: block;
+          line-height: 1.5rem;
+          margin-bottom: 2rem;
+        }
+        span.block {
+          display: block;
+        }
+      }
+      @include screen('tablet') {
+        &::after {
+          position: absolute;
+          content: '';
+          background-color: #fff;
+          opacity: 0.6;
+          height: 100%;
+          width: 100%;
+          z-index: -1;
+        }
+      }
+      @include screen('mobile') {
+        background-size: cover;
+      }
+    }
+  }
+  footer {
+    .footerInfo {
+      display: flex;
+      margin: 3rem 2rem 2rem 2rem;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 171px;
+      }
+      > ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 0;
+        list-style: none;
+
+        li {
+          width: calc(50% - 0.5rem);
+          color: #fff;
+          margin: 0 0.25rem;
+          margin-bottom: 0.5rem;
+          font-weight: 400;
+        }
+        @include screen('tablet') {
+          li {
+            width: 100%;
+            margin: 0 0 0.5rem 0;
+          }
+        }
+      }
+      @include screen('mobile') {
+        display: block;
+        img {
+          margin-bottom: 0.5rem;
+        }
+        ul {
+          padding: 0;
+        }
+      }
+    }
+    > div {
+      margin: 0 2rem;
+    }
+    background: #3d3d3d;
+    p {
+      color: #b8b8b8;
+      text-align: center;
+      padding-top: 1rem;
+      border-top: 1px solid #787878;
+    }
+  }
+}
+.scrollToTop {
+  width: rem(56);
+  height: rem(56);
+  transition: all 0.5s;
+  bottom: 5rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background: #3d3d3d url('../images/mp/expand_less_white.svg') center center no-repeat;
+}
+html {
+  scroll-behavior: smooth;
+  transition: all 1s;
+}

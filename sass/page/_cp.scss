@@ -569,7 +569,6 @@ h2.title {
         p {
           font-weight: 500;
           font-size: 1.25rem;
-          margin-top: 0;
         }
         li > ul {
           display: block;
@@ -691,8 +690,14 @@ h2.title {
         padding-left: 1.25rem;
       }
       .col {
+        > p {
+          margin-bottom: 2.5rem;
+        }
         > ul {
           margin-top: 0;
+          > li {
+            margin-bottom: 1.5rem;
+          }
         }
       }
       h3 {

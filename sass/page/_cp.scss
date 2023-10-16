@@ -6,7 +6,6 @@ h2.title {
   line-height: 1.25em;
   margin: 0.5em 0;
 }
-// .tt{ color: #222; }
 .cp {
   .pic {
     float: left;
@@ -303,5 +302,489 @@ h2.title {
       display: block;
       @include aSetting($colorWord);
     }
+  }
+}
+.cp {
+  main {
+    margin: 0;
+  }
+  header {
+    width: 100%;
+    padding: 0 2rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    @include screen('tablet') {
+      padding: 0;
+    }
+    > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    h1 {
+      margin: 0.625rem 0;
+    }
+    .mpLogo {
+      width: 170px;
+    }
+    .applyBtn.btn {
+      background-color: $errorSecondary;
+      color: #fff;
+      font-size: 1rem;
+      padding: 0 1.5rem;
+      border-radius: 2rem;
+      font-weight: 500;
+      height: 2.75rem;
+    }
+
+    position: fixed;
+    background: #fff;
+    z-index: 99;
+    top: 0;
+    .v-card {
+      margin: 0;
+      border-radius: 0px;
+      header {
+        width: 100%;
+        padding: 0;
+      }
+    }
+    ul {
+      display: flex;
+      margin: 0;
+      align-items: center;
+      list-style: none;
+      white-space: nowrap;
+      li {
+        margin-right: 2rem;
+        font-weight: 500;
+        &:last-child {
+          margin-right: 0;
+        }
+        a {
+          color: $primaryDark !important;
+          &:hover {
+            text-decoration: none;
+            color: $primary !important;
+          }
+        }
+      }
+      button {
+        font-weight: 700;
+      }
+    }
+    .mobileBtn {
+      display: none;
+      background: #fff;
+      border: 2px solid #ececec;
+      border-radius: 0.5rem;
+      padding: 0 1rem;
+      height: rem(42);
+      i {
+        line-height: rem(40);
+      }
+      &:hover {
+        background: #ececec;
+      }
+    }
+    .mobileContenet {
+      // display: none;
+      position: absolute;
+      border-radius: 0;
+      transition: all 0.5s;
+      width: 100%;
+      top: 64px;
+      left: 0;
+      background: #fff;
+      height: 0px;
+      overflow: hidden;
+      ul {
+        display: block;
+
+        padding: 0;
+        margin: 1rem 2rem;
+        li {
+          margin: 0;
+          display: flex;
+          width: 100%;
+          justify-content: center;
+          a {
+            display: block;
+            width: 100%;
+            padding: 0.5rem;
+            text-align: center;
+            &:hover {
+              background-color: #ececec;
+              border-radius: 0.25rem;
+            }
+          }
+          button {
+            margin-top: 0.5rem;
+          }
+        }
+      }
+      &.active {
+        transition: all 0.5s;
+
+        height: rem(244);
+
+        border-top: #ececec solid 2px;
+        box-shadow: rgba(33, 35, 38, 0.2) 0px 10px 10px -10px;
+      }
+    }
+    @include screen('tablet') {
+      padding: 0;
+      .header_content {
+        margin: 0 2rem;
+      }
+    }
+    @include screen('mobile') {
+      ul {
+        display: none;
+      }
+      .mobileBtn {
+        display: block;
+      }
+    }
+  }
+  .dialogMobileCard {
+    ul {
+      li {
+        a {
+          color: #fff;
+          &:hover {
+            text-decoration: unset;
+          }
+        }
+      }
+    }
+    .v-image {
+      width: 180px;
+      margin-bottom: 2rem;
+    }
+  }
+  .content {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    max-width: 1200px;
+    position: relative;
+    @media screen and (max-width: 1200px) {
+      padding: 0 2rem;
+    }
+    @include screen('tablet') {
+      display: block;
+    }
+    @include screen('mobile') {
+      flex-wrap: wrap;
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+  section {
+    z-index: 1;
+    .infoForm {
+      .formGroup {
+        .v-text-field__details,
+        .v-messages {
+          padding: 0;
+          min-height: 0;
+          margin-bottom: 0;
+        }
+        .v-select {
+          padding-top: 0;
+        }
+        .v-select__selection {
+          color: $primary;
+          font-weight: 400;
+        }
+      }
+      .checkboxInline {
+        display: flex;
+        margin: 1rem 0;
+        align-items: center;
+        a {
+          color: $dark;
+          font-weight: 700;
+          margin-left: 0.5rem;
+        }
+        label {
+          margin: 0;
+        }
+        .v-input--selection-controls {
+          margin-top: 0;
+          padding-top: 0;
+        }
+        .v-input__slot {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .cp.main {
+    section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-color: #fff;
+      > div {
+        margin: 0 3rem;
+        width: 100%;
+        max-width: 1200px;
+        ul {
+          display: flex;
+          padding-left: 0rem;
+          list-style: none;
+          flex-wrap: wrap;
+        }
+        h1 {
+          font-family: inherit;
+          font-weight: 500;
+          font-size: 2rem;
+          line-height: 4rem;
+          margin-left: 1rem;
+          margin-top: 0;
+        }
+        h2 {
+          color: $primaryDark;
+          margin: 5rem 0 3.75rem 0;
+          font-weight: bolder;
+          text-align: center;
+          font-size: 2.2rem;
+          span {
+            color: $errorSecondary;
+          }
+        }
+        h3 {
+          font-weight: 500;
+          font-size: 1.75rem;
+          margin: 0 0 0.5rem 0;
+        }
+        p {
+          font-weight: 500;
+          font-size: 1.25rem;
+          margin-top: 0;
+        }
+        li > ul {
+          display: block;
+          li {
+            font-size: 1rem;
+            font-weight: 500;
+          }
+        }
+        @media (max-width: 960px) {
+          margin: 0 5rem;
+        }
+        @include screen('mobile') {
+          margin: 0 3rem;
+        }
+      }
+    }
+    .privacyBanner {
+      margin-top: rem(64);
+      height: rem(190);
+      position: relative;
+      justify-content: center;
+      h1 {
+        margin-bottom: 0.5rem;
+        color: $primaryDark;
+        display: flex;
+        align-items: flex-end;
+
+        @include screen('tablet') {
+          display: block;
+          span {
+            width: 100%;
+          }
+          line-height: 2rem;
+          margin-left: 0;
+        }
+        @include screen('xsMobile') {
+          span {
+            font-size: 1.5rem;
+          }
+        }
+      }
+      .subtitle {
+        margin-left: 0.5rem;
+        margin-bottom: 0.5rem;
+        p {
+          margin-bottom: 0;
+          color: #18cbff;
+        }
+        @include screen('tablet') {
+          display: inline-block;
+          margin-left: 0;
+        }
+      }
+      background-image: url('../images/content_bg.jpg');
+      > div {
+        position: relative;
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -3.75rem;
+          right: 0rem;
+          width: 432px;
+          height: 70px;
+          background: url('../images/mp/doctorMe_text.png') no-repeat;
+        }
+      }
+      @include screen('tablet') {
+        > div {
+          &::after {
+            right: 0;
+            background-size: contain;
+            height: 60px;
+            width: 336px;
+            bottom: -3.5rem;
+          }
+        }
+      }
+      @include screen('mobile') {
+        margin: 0;
+        > div {
+          &::after {
+            height: 65px;
+            width: 280px;
+            bottom: -4.5rem;
+          }
+        }
+      }
+      @include screen('xsMobile') {
+        > div {
+          &::after {
+            width: 180px;
+            bottom: -4.5rem;
+            height: 50px;
+          }
+        }
+      }
+      @media screen and (max-width: 360px) {
+        > div {
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+    .privacySection {
+      > div {
+        margin-top: 6rem;
+        margin-bottom: 2rem;
+        @include screen('tablet') {
+          margin-top: 3rem;
+        }
+      }
+      .listTitle {
+        margin-top: 0.75rem;
+        margin-bottom: 0.25rem;
+      }
+      .numList {
+        list-style: num;
+        padding-left: 1.25rem;
+      }
+      .col {
+        > ul {
+          margin-top: 0;
+        }
+      }
+      h3 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+  footer {
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    .footerInfo {
+      display: flex;
+      max-width: 1440px;
+      margin: 3rem 2rem 2rem 2rem;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 171px;
+        min-width: 171px;
+      }
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+        list-style: none;
+        padding-left: 0;
+        li {
+          width: calc(50% - 0.5rem);
+          color: #dcdcdc;
+          margin: 0 0.25rem;
+          margin-bottom: 0.5rem;
+          font-weight: 400;
+        }
+        @include screen('tablet') {
+          li {
+            width: 100%;
+            margin: 0 0 0.5rem 0;
+          }
+        }
+      }
+      .text {
+        border-top: 1px solid #787878;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 1rem;
+        p {
+          color: #b8b8b8;
+          margin-bottom: 0;
+        }
+        span {
+          a {
+            color: #a1f3ff;
+            margin-right: 0.5rem;
+          }
+        }
+        @include screen('tablet') {
+          display: block;
+          span {
+            margin-top: 1rem;
+            display: block;
+          }
+          p {
+            margin-top: 0.5rem;
+          }
+        }
+      }
+      @include screen('mobile') {
+        > div {
+          display: block;
+        }
+        display: block;
+        img {
+          margin-bottom: 0.5rem;
+        }
+        ul {
+          padding: 0;
+        }
+      }
+    }
+    > div {
+      margin: 0 2rem;
+    }
+    .info {
+      margin-left: 2.75rem;
+    }
+    background: #3d3d3d;
   }
 }

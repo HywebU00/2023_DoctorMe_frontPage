@@ -187,25 +187,54 @@
             <td>首頁</td>
             <!-- 連結放到a裡面就好 -->
             <td><a href="mp.html"></a></td>
-            <td><span class="gray">list</span></td>
-            <td><span class="gray">float</span></td>
+            <td><span class="gray"></span></td>
+            <td><span class="gray"></span></td>
           </tr>
-
-
-
         </tbody>
       </table>
     </div>
-    <hr />
-  </div>
-  <a href="javascript:;" class="scrollToTop" role="button">回頁首</a>
-  <script>
-    let aName = document.querySelectorAll('tbody a');
-    aName.forEach((i) => {
-      let Link = i.getAttribute('href');
-      i.textContent = Link;
-    });
-  </script>
+    <div class="tableWrapper">
+      <h2>內容頁</h2>
+      <!-- hyUI 標準頁面 -->
+      <table>
+        <thead>
+          <tr>
+            <th class="num">編號</th>
+            <th>頁面名稱</th>
+            <th>檔案名稱</th>
+            <th>選單樣式</th>
+            <th>格線系統</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>隱私權政策</td>
+            <!-- 連結放到a裡面就好 -->
+            <td><a href="cp_privacy.html"></a></td>
+            <td><span class="gray"></span></td>
+            <td><span class="gray"></span></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>產品服務條款</td>
+            <!-- 連結放到a裡面就好 -->
+            <td><a href="cp_product.html"></a></td>
+            <td><span class="gray"></span></td>
+            <td><span class="gray"></span></td>
+          </tr>
+        </tbody>
+      </table>
+      <hr />
+    </div>
+    <a href="javascript:;" class="scrollToTop" role="button">回頁首</a>
+    <script>
+      let aName = document.querySelectorAll('tbody a');
+      aName.forEach((i) => {
+        let Link = i.getAttribute('href');
+        i.textContent = Link;
+      });
+    </script>
 </body>
 
 </html>

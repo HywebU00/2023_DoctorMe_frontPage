@@ -53,6 +53,9 @@ footer {
         a {
           color: #a1f3ff;
           margin-right: 0.5rem;
+          &:hover {
+            color: mix(#fff, #a1f3ff, 50%);
+          }
         }
       }
       @include screen('tablet') {
